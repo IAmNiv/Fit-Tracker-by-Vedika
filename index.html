@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker by Vedika</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Fitness Tracker by Vedika❤️</h1>
+    </header>
+    <main class="container mt-4">
+        <section id="tracking" class="mb-4">
+            <h2 class="mb-3">Track Your Adventure</h2>
+            <div class="btn-group mb-3" role="group">
+                <button id="startTracking" class="btn btn-success">Start Adventure!</button>
+                <button id="stopTracking" class="btn btn-warning">Pause Adventure</button>
+            </div>
+            <p id="status">Status: Ready to Explore!</p>
+            <div id="map" style="height: 400px; width: 100%; border-radius: 10px;"></div>
+            <img src="https://cdn-icons-png.flaticon.com/256/8883/8883893.png" alt="Character" class="img-fluid mx-auto d-block mt-3" style="max-width: 150px;">
+        </section>
+        <section id="goals" class="mb-4">
+            <h2 class="mb-3">Set Your Daily Challenge</h2>
+            <div class="input-group mb-3">
+                <input type="number" id="goalInput" class="form-control" placeholder="Enter steps">
+                <div class="input-group-append">
+                    <button id="setGoal" class="btn btn-info">Set Challenge</button>
+                </div>
+            </div>
+            <p id="goalStatus">Challenge: Not Set</p>
+            <div class="progress mt-2">
+                <div id="goalProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+        </section>
+        <section id="quotes" class="mb-4">
+            <h2 class="mb-3">Fitness Inspiration</h2>
+            <blockquote id="quote" class="blockquote text-center">
+                <p class="mb-0">"Fitness is not about being better than someone else. It’s about being better than you used to be."</p>
+                <footer class="blockquote-footer">Unknown</footer>
+            </blockquote>
+        </section>
+        <section id="stickers" class="mb-4">
+            <h2 class="mb-3">Fitness Stickers</h2>
+            <div id="stickerContainer" class="d-flex flex-wrap justify-content-center"></div>
+        </section>
+        <section id="reminders" class="mb-4">
+            <h2 class="mb-3">Keep Moving!</h2>
+            <p>Let's keep the fun going! We’ll remind you if you’re idle for too long.</p>
+        </section>
+    </main>
+    <div id="idleReminderModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Idle Reminder</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Hey! You've been idle for too long. Time to stretch or take a fun break!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="script.js"></script>
+</body>
+</html>

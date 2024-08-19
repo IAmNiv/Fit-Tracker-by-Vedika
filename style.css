@@ -1,0 +1,84 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #ff5722;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+#map {
+  border: 2px solid #ff5722;
+  border-radius: 10px;
+}
+
+#goalProgress {
+  transition: width 0.5s;
+  background-color: #4caf50;
+}
+
+.btn {
+  font-size: 1.2rem;
+}
+
+input[type="number"] {
+  border-radius: 10px 0 0 10px;
+}
+
+input[type="number"]::placeholder {
+  color: #aaa;
+}
+
+input[type="number"]:focus {
+  box-shadow: none;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.modal-content {
+  background-color: #fff3e0;
+}
+
+.modal-header {
+  background-color: #ffccbc;
+}
+
+.modal-footer {
+  background-color: #ffccbc;
+}
+
+blockquote {
+  font-size: 1.2rem;
+  background-color: #e3f2fd;
+  border-left: 5px solid #039be5;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+#stickerContainer {
+  position: relative;
+  min-height: 100px;
+}
+
+.sticker {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-size: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.sticker:hover {
+  transform: scale(1.1);
+}
